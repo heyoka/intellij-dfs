@@ -20,15 +20,15 @@ import com.intellij.openapi.fileTypes.FileTypeFactory
 import com.intellij.openapi.fileTypes.LanguageFileType
 
 object TickScriptFileType : LanguageFileType(TickScriptLanguage) {
-  val DEFAULT_EXTENSION: String = "tick"
+  val DEFAULT_EXTENSION: String = "dfs"
 
   override fun getIcon() = Icons.FileTypes.TickScript
 
   override fun getDefaultExtension() = DEFAULT_EXTENSION
 
-  override fun getDescription() = "Kapacitor TICKscript" // TODO: Better one
+  override fun getDescription() = "FAXE dfs-script" // TODO: Better one
 
-  override fun getName() = "TICKscript"
+  override fun getName() = "DFSscript"
 
 }
 

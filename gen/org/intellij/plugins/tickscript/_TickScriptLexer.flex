@@ -63,7 +63,7 @@ REFERENCE_STRING=\"([^\\\"\r\n]|\\[^\r\n])*\"
   "!~"                        { return OP_REGEXNOTEQUAL; }
   "AND"                       { return OP_AND; }
   "OR"                        { return OP_OR; }
-  "var"                       { return KW_VAR; }
+  "def"                       { return KW_VAR; }
   "lambda:"                   { return KW_LAMBDA; }
   "TRUE"                      { return TRUE; }
   "FALSE"                     { return FALSE; }

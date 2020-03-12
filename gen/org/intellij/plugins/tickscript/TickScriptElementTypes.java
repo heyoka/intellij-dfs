@@ -44,7 +44,7 @@ public interface TickScriptElementTypes {
   IElementType FALSE = new TickScriptTokenType("FALSE");
   IElementType ID = new TickScriptTokenType("ID");
   IElementType KW_LAMBDA = new TickScriptTokenType("lambda:");
-  IElementType KW_VAR = new TickScriptTokenType("var");
+  IElementType KW_VAR = new TickScriptTokenType("def");
   IElementType LINE_COMMENT = new TickScriptTokenType("line_comment");
   IElementType L_BRACKET = new TickScriptTokenType("[");
   IElementType L_PAREN = new TickScriptTokenType("(");

@@ -17,10 +17,10 @@ package org.intellij.plugins.tickscript
 
 import com.intellij.lang.Language
 
-object TickScriptLanguage : Language("TickScript") {
+object TickScriptLanguage : Language("DfsScript") {
   override fun isCaseSensitive() = true
   override fun getDisplayName(): String {
-    return "TickScript Language" // TODO: Better name
+    return "DfsScript Language" // TODO: Better name
   }
 }
 

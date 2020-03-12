@@ -95,14 +95,14 @@
 program ::= statement*
 
 private statement ::= type_declaration | declaration | expression
-type_declaration ::= "var" identifier identifier {
+type_declaration ::= "def" identifier identifier {
   methods=[
     identifier=""
     variable="identifier[0]"
     type="identifier[1]"
   ]
 }
-declaration ::= "var" identifier "=" expression {
+declaration ::= "def" identifier "=" expression {
   methods=[
     expression=""
     value="expression[1]"
