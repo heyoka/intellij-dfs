@@ -26,5 +26,5 @@ class TickScriptCommenter : Commenter {
 
   override fun getBlockCommentSuffix(): String? = null
 
-  override fun getLineCommentPrefix(): String? = "//"
+  override fun getLineCommentPrefix(): String? = "%"
 }

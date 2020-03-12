@@ -68,7 +68,7 @@
 //    KW_Or     = "OR"
 //    KW_True   = "TRUE"
 //    KW_False  = "FALSE"
-    KW_Var    = "var"
+    KW_Var    = "dfs"
     KW_Lambda = "lambda:"
 
     TRUE='TRUE'
@@ -76,11 +76,11 @@
 
     ID="regexp:[a-zA-Z_][0-9a-zA-Z_]*"
     NUMBER='regexp:-?(\d+(\.\d+)?)|(\.\d+)'
-    DURATION='regexp:[1-9]\d*([uµsmhdw]|ms)'
+    DURATION='regexp:[1-9]\d*([smhdw]|ms)'
 
 // TODO:Add tailing '?' to strings
     SINGLE_QUOTED_STRING="regexp:'([^\\\']|\\.)*'"
-    TRIPLE_QUOTED_STRING="regexp:'''([^']+'{0,2})*'''"
+    TRIPLE_QUOTED_STRING="regexp:<<<([^<]+<{0,2})*>>>"
 
     REGEX_STRING="regexp:/([^\\\r\n]|\\[^\r\n])*/"
     REFERENCE_STRING="regexp:\"([^\\\"\r\n]|\\[^\r\n])*\""
@@ -202,11 +202,11 @@ identifier        ::= ID //letter (letter | digit)*
   implements="com.intellij.psi.PsiNamedElement"
   mixin="org.intellij.plugins.tickscript.psi.impl.TickScriptIdentifierMixin"
 }
-boolean_literal   ::= TRUE | FALSE // "TRUE" | "FALSE"
+boolean_literal   ::= TRUE | FALSE | true | false // "TRUE" | "FALSE"
 //int_literal       ::= INTEGER // 'regexp:[1-9]' digit*
 number_literal    ::= NUMBER // digit+ ("." digit*)*
 duration_literal  ::= DURATION //int_literal duration_unit
-//duration_unit     ::= "u" | "µ" | "ms" | "s" | "m" | "h" | "d" | "w"
+//duration_unit     ::= "ms" | "s" | "m" | "h" | "d" | "w"
 string_literal    ::= SINGLE_QUOTED_STRING | TRIPLE_QUOTED_STRING
 star_literal      ::= "*"
 regex_literal     ::= REGEX_STRING {

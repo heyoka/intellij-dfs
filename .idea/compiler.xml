@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="intellij-dfs-intellij-tickscript_main" target="1.6" />
+      <module name="intellij-dfs-intellij-tickscript_test" target="1.6" />
       <module name="intellij-tickscript_main" target="1.6" />
       <module name="intellij-tickscript_test" target="1.6" />
     </bytecodeTargetLevel>
